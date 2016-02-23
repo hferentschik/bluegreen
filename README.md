@@ -1,5 +1,8 @@
 # Demo scripts for Container Evolution presentation
 
-See - http://redhat.slides.com/hferents/container-evolution
+* [Presentation slides](http://redhat.slides.com/hferents/container-evolution)
+* Demos are run against this [branch](https://github.com/hferentschik/openshift-vagrant/tree/container-evolution-demo) of [openshift-vagrant](https://github.com/redhat-developer-tooling/openshift-vagrant)
 
-<sup>Last updated: 23/02/2016</sup>
+Work in progress...
+
+<sup>Last updated: 07/03/2016</sup>

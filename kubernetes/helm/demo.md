@@ -17,7 +17,7 @@ Openshift integrate. In this case by usig [Helm](https://github.com/helm/helm).
 
     # Show a bit of Helm functionality
     $ ./helm update
-    $ ./heml search nginx
+    $ ./helm search nginx
     $ ./helm info example-nginx
 
     # Install example-nginx for demo purposes
@@ -29,7 +29,7 @@ Openshift integrate. In this case by usig [Helm](https://github.com/helm/helm).
     $ oc expose service example-nginx --hostname=nginx.10.1.2.2.xip.io
 
     # Show http://nginx.10.1.2.2.xip.io/ exposed now
-    # Edit the config in the console and change repo to https://github.com/hferentschik/basic-site
+    # Edit the deployment config in the console and change repo to https://github.com/hferentschik/basic-site
     # Restart pods either via console or via
     $ oc scale rc/example-nginx --replicas=0
     $ oc scale rc/example-nginx --replicas=1

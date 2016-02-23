@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<folders>
+    <folder>
+        <title>container</title>
+        <snippets>
+            <snippet>
+                <title>in.relation.to</title>
+                <content>docker run -t -i -p 4242:4242 -v `pwd`:/home/dev/in.relation.to hferentschik/in.relation.to</content>
+            </snippet>
+            <snippet>
+                <title>ip</title>
+                <content>docker-machine ip default</content>
+            </snippet>
+            <snippet>
+                <title>hello</title>
+                <content>docker run busybox /bin/echo hello world</content>
+            </snippet>
+            <snippet>
+                <title>100MB</title>
+                <content>docker run busybox dd if=/dev/urandom of=file.txt bs=1048576 count=100</content>
+            </snippet>
+            <snippet>
+                <title>ps -a</title>
+                <content>docker ps -a</content>
+            </snippet>
+            <snippet>
+                <title>docker | less</title>
+                <content>docker ps -a -s | less -S</content>
+            </snippet>
+            <snippet>
+                <title>docker --rm</title>
+                <content>docker run busybox --rm /bin/echo hello world</content>
+            </snippet>
+            <snippet>
+                <title>docker latest</title>
+                <content>docker ps -l -q</content>
+            </snippet>
+            <snippet>
+                <title>docker commit</title>
+                <content>docker commit `docker ps -l -q` debug</content>
+            </snippet>
+            <snippet>
+                <title>docker run</title>
+                <content>docker run -it debug /bin/bash</content>
+            </snippet>
+            <snippet>
+                <title>docker filter</title>
+                <content>docker ps -a -s --filter 'exited=0'</content>
+            </snippet>
+            <snippet>
+                <title>oc login</title>
+                <content>oc login https://10.1.2.2:8443</content>
+            </snippet>
+            <snippet>
+                <title>oc helm</title>
+                <content>oc new-project helm</content>
+            </snippet>
+            <snippet>
+                <title>helm search</title>
+                <content>./helm search nginx</content>
+            </snippet>
+            <snippet>
+                <title>helm info</title>
+                <content>./helm info example-nginx</content>
+            </snippet>
+            <snippet>
+                <title>helm install</title>
+                <content>./helm install example-nginx</content>
+            </snippet>
+            <snippet>
+                <title>helm expose</title>
+                <content>oc expose service example-nginx --hostname=nginx.10.1.2.2.xip.io</content>
+            </snippet>
+            <snippet>
+                <title>helm scale</title>
+                <content>oc scale rc/example-nginx --replicas=0</content>
+            </snippet>
+            <snippet>
+                <title>create blue route</title>
+                <content>oc expose service blue --name=bluegreen --hostname=bluegreen.10.1.2.2.xip.io</content>
+            </snippet>
+            <snippet>
+                <title>change blue/green route</title>
+                <content>oc edit route/bluegreen</content>
+            </snippet>
+            <snippet>
+                <title>autoscale</title>
+                <content>oc autoscale dc/green --min 1 --max 10 --cpu-percent=5</content>
+            </snippet>
+            <snippet>
+                <title>hpa check</title>
+                <content>oc get hpa</content>
+            </snippet>
+            <snippet>
+                <title>ab</title>
+                <content>ab -r -n 1000000 -c 10 http://bluegreen.10.1.2.2.xip.io/</content>
+            </snippet>
+        </snippets>
+    </folder>
+</folders>

@@ -8,7 +8,7 @@ Execute and discuss the following commands:
     docker-machine ip default
 
     docker run busybox /bin/echo hello world
-    docker run busybox  dd if=/dev/urandom of=file.txt bs=1048576 count=100
+    docker run busybox dd if=/dev/urandom of=file.txt bs=1048576 count=100
     docker ps -a
     docker ps -a -s
     docker ps -a -s | less -S
