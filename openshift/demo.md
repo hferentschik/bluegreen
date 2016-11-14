@@ -13,11 +13,12 @@ post.
  * no route
 * Demo created service
 * Create route
- * `oc expose service blue --name=bluegreen --hostname=bluegreen.10.1.2.2.xip.io`
+ * `oc expose service blue --name=bluegreen
 * Make change to code
 * Create sample app _green_
 * Change the route
- * `oc edit route/bluegreen`
+ * `oc get -o json route/bluegreen`
+ * `oc  patch route/bluegreen --patch '{"spec":{"to":{"name": "green"}}}'`
 
 ## Demo of application auto scaling
 
